@@ -7,13 +7,11 @@ create table if not exists albums (
 create table if not exists singers (
 	id serial primary key,
 	singer_name text unique not null,
-	album_id integer references albums(id)
 );
 
 create table if not exists styles (
 	id serial primary key,
 	style_name text not null,
-	singer_id integer references singers(id)
 );
 
 create table if not exists tracks (
@@ -28,6 +26,25 @@ create table if not exists collections (
 	collection_name text not null,
 	collection_year integer check (collection_year > 0)
 );
+
+create table if not exists singers_styles (
+    id serial primary key,
+    style_id integer references styles(id),
+    singer_id integer references singers(id)
+);
+
+create table if not exists albums_singers (
+    id serial primary key,
+    singer_id integer references singers(id),
+    album_id integer references albums(id)
+};
+
+create table if not exists collection_tracks (
+    id serial rimary key,
+    collection_id integer references collection(id),
+    track_id integer references tracks(id)
+);
+
 
 
 create table if not exists departments (
