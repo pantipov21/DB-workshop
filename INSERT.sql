@@ -47,6 +47,7 @@ insert into tracks(album_id, track_name, duration) values(7, 'Песня13', 140
 insert into tracks(album_id, track_name, duration) values(7, 'Песня14', 145);
 insert into tracks(album_id, track_name, duration) values(8, 'Песня15', 240);
 insert into tracks(album_id, track_name, duration) values(8, 'Песня16', 255);
+insert into tracks(album_id, track_name, duration) values(8, 'Песня17', 110);
 
 insert into singers_styles(style_id, singer_id) values(1, 1);
 insert into singers_styles(style_id, singer_id) values(1, 2);
